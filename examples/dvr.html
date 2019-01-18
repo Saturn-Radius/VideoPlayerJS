@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-cast-api-enabled="true">
+<head>
+    <script src="../dist/castr_player.dev.js"></script>
+</head>
+<body>
+  <div><h1>Video tag with Castr Player - playing DVR live stream</h1></div>
+  <video oncontextmenu="return false;" id="videojs-chromecast-player" preload="none" class="video-js vjs-default-skin" width="640" height="360" controls>
+    <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+  </video>
+  <script>
+    (function(){
+      window.hola_player({dvr: true, mchromecast: true});
+      
+
+
+    })();
+  </script>
+</body>
+</html>
+
+

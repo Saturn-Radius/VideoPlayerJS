@@ -1,0 +1,22 @@
+.vjs-dvr .vjs-progress-control {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.vjs-dvr .vjs-live-control {
+    flex: inherit;
+    cursor: pointer;
+}
+.vjs-dvr .vjs-live-control .vjs-tooltip {
+    line-height: 1em;
+}
+.vjs-dvr-live .vjs-live-control .vjs-tooltip {
+    display: none;
+}
+.vjs-dvr-live .vjs-live-control {
+    cursor: default;
+}
+.vjs-dvr:not(.vjs-dvr-live) .vjs-live-display:before {
+    background: #566377;
+}

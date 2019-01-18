@@ -1,0 +1,90 @@
+.video-js .vjs-button.vjs-share-button {
+    position: absolute;
+    width: 3.6em;
+    height: 3.6em;
+    top: 1.2em;
+    right: 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    background: rgba(28, 28, 28, 0.9);
+}
+
+.vjs-ios-skin .vjs-button.vjs-share-button {
+    background: 0 0;
+}
+
+.vjs-ios-skin.vjs-has-started .vjs-button.vjs-share-button {
+    top: 45px;
+}
+
+.video-js .vjs-button.vjs-share-button .vjs-button-icon {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 50%;
+    left: 50%;
+    margin: -1em 0 0 -1.1em;
+}
+
+.video-js.vjs-ad-playing .vjs-button.vjs-share-button {
+    display: none;
+}
+
+.video-js.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-share-button {
+    opacity: 0;
+    transition: visibility 0.25s, opacity 0.25s;
+}
+
+.video-js .vjs-button.vjs-share-button .vjs-tooltip,
+.video-js .vjs-modal-dialog.vjs-share-dialog .vjs-close-button .vjs-tooltip {
+    top: 3.2em;
+}
+
+.video-js .vjs-modal-dialog.vjs-share-dialog {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+.video-js.vjs-ima-ad .vjs-modal-dialog.vjs-share-dialog,
+.video-js.vjs-ima-ad .vjs-button.vjs-share-button {
+    z-index: 1112;
+}
+
+.video-js .vjs-modal-dialog.vjs-share-dialog .vjs-modal-dialog-content {
+    top: 50%;
+    height: 7.6em;
+    padding: 0;
+    margin-top: -3.8em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.video-js .vjs-modal-dialog.vjs-share-dialog .vjs-share-dialog-title {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.video-js .vjs-modal-dialog.vjs-share-dialog .vjs-share-dialog-buttons .vjs-button {
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.video-js .vjs-modal-dialog.vjs-share-dialog .vjs-share-link {
+    display: block;
+    width: 4.4em;
+    height: 4.4em;
+    padding: 0.3em;
+    background-repeat: no-repeat;
+    background-size: 3.4em;
+    background-position: center center;
+}
+
+.video-js .vjs-modal-dialog.vjs-share-dialog .vjs-share-link svg {
+    pointer-events: none;
+}
+
+.video-js.vjs-fullscreen:not(.vjs-small) .vjs-button.vjs-share-button,
+.video-js.vjs-fullscreen:not(.vjs-small) .vjs-modal-dialog.vjs-share-dialog {
+    font-size: 150%;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-cast-api-enabled="true">
+<head data-cast-api-enabled="true">
+    <!-- javascripts -->
+    <script src="http://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <script src="../dist/castr_player.dev.js"></script>
+</head>
+<body>
+  <div><h1>Video tag with Castr Player - playing DVR live stream</h1></div>
+  <video oncontextmenu="return false;" id="videojs-chromecast-player" preload="none" class="video-js vjs-default-skin" width="640" height="360" controls>
+    <source src="https://cstr-37.castr.io/castr/live_d1e97b40ebf311e8aa8915cc9f48337a/index.m3u8" type="video/mp4">
+  </video>
+  <script>
+    (function(){
+      window.hola_player({dvr: true, mchromecast: true});
+    })();
+  </script>
+</body>
+</html>
+
+

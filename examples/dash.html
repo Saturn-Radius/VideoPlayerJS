@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../dist/castr_player.dash.dev.js"></script>
+</head>
+<body>
+  <div><h1>Video tag with Castr Player - playing DASH</h1></div>
+  <video preload="none" class="video-js vjs-default-skin" width="640" height="360" controls/>
+  <script>
+    (function(){
+      window.hola_player({
+        video_url: 'https://s3.amazonaws.com/_bc_dml/example-content/sintel_dash/sintel_vod.mpd',
+      });
+    })();
+  </script>
+</body>
+</html>

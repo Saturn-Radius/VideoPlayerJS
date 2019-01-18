@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../dist/castr_player.dev.js?customer=demo"></script>
+</head>
+<body>
+  <div><h1>Video tag with Castr Player - playing MP4</h1></div>
+  <div id="player1"></div>
+  <script>
+    (function(){
+      var cdn_static = 'http://video.h-cdn.com/static';
+      window.hola_player({
+        player: "#player1",
+        controls: true,
+        width: 640,
+        height: 360,
+        sources: [{
+          src: 'http://video.h-cdn.com/static/mp4/tears_of_steel_1080p_MP4.mp4',
+          type: 'video/mp4',
+          label: '1080p',
+        }, {
+          src: 'http://video.h-cdn.com/static/mp4/tears_of_steel_360p_MP4.mp4',
+          type: 'video/mp4',
+          label: '360p',
+        }],
+        poster: cdn_static+'/mp4/tears_of_steel_1080p_MP4.jpg',
+        thumbnails: {
+          0: {
+            src: cdn_static+'/mp4/tears_of_steel_thumbnails_0_7.jpg',
+            sprites: {
+              width: 192,
+              height: 80,
+              position: [0, 87, 130, 172, 217, 240, 303, 346]
+            }
+          },
+          389: {
+            src: cdn_static+'/mp4/tears_of_steel_thumbnails_8_15.jpg',
+            sprites: {
+              width: 192,
+              height: 80,
+              position: [389, 431, 473, 517, 559, 603, 647, 690]
+            }
+          }
+        },
+        settings: {
+          quality: true,
+        },
+      });
+    })();
+  </script>
+</body>
+</html>

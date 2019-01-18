@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../dist/castr_player.dev.js"></script>
+</head>
+<body>
+  <div><h1>Castr Player - scheduling ads for live video</h1></div>
+  <video preload="none" class="video-js vjs-default-skin" width="640" height="360" controls>
+    <source src="//b028.wpc.azureedge.net/80B028/Samples/a38e6323-95e9-4f1f-9b38-75eba91704e4/5f2ce531-d508-49fb-8152-647eba422aec.ism/Manifest(format=m3u8-aapl)" type="application/x-mpegurl">
+  </video>
+  <script>
+    (function(){
+      window.hola_player({
+        title: 'Scheduling ads for live video',
+        dvr: true,
+        poster: 'http://video.h-cdn.com/static/mp4/tears_of_steel_1080p_MP4.jpg',
+        ads: {
+          schedule: [{
+            time: 'start',
+            type: 'linear',
+            tag: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=',
+          }, /*{
+            time: 10,
+            type: 'nonlinear',
+            tag: 'https://pubads.g.doubleclick.net/gampad/ads?sz=480x70&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dnonlinear&correlator=',
+          }, */{
+            time: '10',
+            type: 'linear',
+            tag: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=',
+          }],
+          disableCustomPlaybackForIOS10Plus: true,
+        },
+        settings: {
+          quality: true,
+        },
+      });
+    })();
+  </script>
+</body>
+</html>

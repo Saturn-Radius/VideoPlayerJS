@@ -1,0 +1,81 @@
+{
+  "name": "@hola.org/hola_player",
+  "description": "An HTML5 and Flash video player with a common API and skin for both.",
+  "version": "1.0.165",
+  "license": "ISC",
+  "keywords": [
+    "flash",
+    "html5",
+    "player",
+    "video",
+    "videojs"
+  ],
+  "homepage": "http://holacdn.com/player",
+  "scripts": {
+    "build": "grunt",
+    "login": "c=`npm c ls`; test \"${c#*@hola}\" != \"$c\" || npm login --scope @hola.org",
+    "release": "run-s build login release:*",
+    "release:changelog": "chg release -y && git add CHANGELOG.md && git commit -m \"release v$npm_package_version\"",
+    "release:dist": "git add -f dist && git commit -m \"add dist v$npm_package_version\"",
+    "release:tag": "git tag v$npm_package_version",
+    "release:pushtags": "git push --tags origin",
+    "release:publish": "npm publish",
+    "release:reset": "git reset HEAD~1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hola/hola_player.git"
+  },
+  "main": "./dist/hola_player.js",
+  "browserify-css": "./browserify-css.js",
+  "files": [
+    "Gruntfile.js",
+    "browserify-css.js",
+    "dist/",
+    "examples/",
+    "src/",
+    ".jshintrc"
+  ],
+  "dependencies": {
+    "@hola.org/dashjs": "2.1.0-3",
+    "@hola.org/hap.js": "1.0.150",
+    "@hola.org/videojs-contrib-ads": "4.2.0-8",
+    "@hola.org/videojs-contrib-media-sources": "3.1.0-12",
+    "@hola.org/videojs-hola-skin": "0.0.5-110",
+    "@hola.org/videojs-ima": "0.5.0-46",
+    "@hola.org/videojs-osmf": "0.0.0-35",
+    "@hola.org/videojs-settings": "0.0.3-93",
+    "@hola.org/videojs-swf": "5.1.0-12",
+    "@hola.org/videojs-thumbnails": "0.1.1-11",
+    "lodash": "4.17.5",
+    "video.js": "github:hola/video.js#hola_5.10.2",
+    "videojs-analytics": "^1.0.0",
+    "videojs-chromecast": "^2.0.8",
+    "videojs-contrib-dash": "2.6.1",
+    "videojs-vtt.js": "0.12.3",
+    "videojs-watermark": "1.0.1"
+  },
+  "devDependencies": {
+    "brfs": "1.4.3",
+    "browserify-css": "^0.9.2",
+    "browserify-derequire": "^0.9.6",
+    "browserify-shim": "^3.8.13",
+    "browserify-transform-tools": "^1.7.0",
+    "browserify-versionify": "^1.0.6",
+    "chg": "^0.3.2",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-exorcise": "^2.1.1",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-zip": "^0.17.1",
+    "load-grunt-tasks": "^3.5.2",
+    "npm-run-all": "^3.1.2",
+    "time-grunt": "^1.4.0"
+  }
+}
